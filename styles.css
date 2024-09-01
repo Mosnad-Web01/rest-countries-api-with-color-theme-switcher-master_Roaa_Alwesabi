@@ -1,0 +1,154 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --background-color: hsl(0, 0%, 98%);
+    --text-color: hsl(200, 15%, 8%);
+    --element-background: hsl(0, 0%, 100%);
+    --input-border: hsl(0, 0%, 52%);
+}
+
+.dark-mode {
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: hsl(0, 0%, 100%);
+    --element-background: hsl(209, 23%, 22%);
+    --input-border: hsl(0, 0%, 52%);
+}
+
+header {
+    background-color: var(--element-background);
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+}
+
+input[type="text"],
+select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid var(--input-border);
+    width: 200px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--element-background);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+    padding: 40px 0;
+    background-color: var(--background-color);
+}
+
+#countriesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--element-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.card-body p {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.country-detail {
+    padding: 20px;
+    background-color: var(--element-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.country-detail img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.country-detail h2 {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.country-detail p {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: var(--element-background);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 15px;
+    z-index: 1000; /* تأكد من ظهور الزر فوق العناصر الأخرى */
+}
+
+main {
+    padding: 40px 0;
+    background-color: var(--background-color);
+    position: relative; /* هذا ضروري إذا كنت تستخدم position: fixed لزر العودة */
+}
